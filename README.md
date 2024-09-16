@@ -1,4 +1,4 @@
-# Towards Hybrid Earth System Modeling
+# Towards Hybrid Earth System Modeling: A Living Review
 
 This page reviews and organizes emerging hybrid Earth System Models (ESMs), which combine Machine Learning (ML) and physics-based components, alphabetically. Hybrid ESMs retain essential components for physical consistency (e.g., the dynamical core) while using ML to enhance parameterizations for small-scale processes (e.g., clouds). These models hold promise for improving long-term projections of Earth's physical climate and biogeochemical cycles.
 
@@ -13,6 +13,7 @@ If you notice any errors, omissions, or outdated information, please feel free t
 - [ICON-ML](#icon-ml)
 - [Hybrid FV3-GFS](#hybrid-fv3-gfs)
 - [Hybrid SAM](#hybrid-sam)
+- [MOM6](#mom6)
 - [NCAM](#ncam)
 - [NeuralGCM](#neuralgcm)
 
@@ -20,14 +21,18 @@ If you notice any errors, omissions, or outdated information, please feel free t
 
 ## CBRAIN
 
-Cloud Brain (CBRAIN) aims to break the convective parameterization deadlock by training neural networks to emulate the total subgrid thermodynamics time-tendencies, i.e., the cumulative tendency of prognostic thermodynamic variables (temperature and specific humidity) produced by subgrid-scale convection, radiation, and turbulence. 
+Cloud Brain (CBRAIN) aims to break the convective parameterization deadlock in the [Community Atmosphere Model (CAM)](https://www.cesm.ucar.edu/models/cam) by training neural networks to emulate the total subgrid thermodynamic time tendencies. These tendencies represent the cumulative tendencies of prognostic thermodynamic variables (temperature and specific humidity) due to subgrid-scale processes such as convection, radiation, and turbulence.
+
+- In the aquaplanet ("ocean world") configuration, the [Super-Parameterized Community Atmosphere Model v3 (SPCAM3)](https://journals.ametsoc.org/view/journals/atsc/62/7/jas3453.1.xml?tab_body=fulltext-display) is used. Here, each coarse grid cell contains a two-dimensional convection-permitting model that explicitly resolves convection, providing the target tendencies for the neural networks.
+
+- In the realistic geography configuration, the [Super-Parameterized Community Atmosphere Model v5 (SPCAM5)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2014MS000375) is coupled with the [Community Land Model v4 (CLM4)](https://www2.cesm.ucar.edu/models/cesm1.2/clm/CLM4_Tech_Note.pdf). As in the aquaplanet configuration, each coarse grid cell includes a two-dimensional convection-permitting model that explicitly resolves convection, providing the target tendencies for the neural networks. 
 
 ### Latest coupled simulations in [Lin, J., Yu, S., Peng, L., Beucler, T., Wong-Toi, E., Hu, Z., ... & Pritchard, M. S. (2024). Sampling Hybrid Climate Simulation at Scale to Reliably Improve Machine Learning Parameterization. arXiv preprint 2309.16177.](https://arxiv.org/abs/2309.16177)
 
 ### See also:
+- [Behrens, G., Beucler, T., Iglesias-Suarez, F., Yu, S., Gentine, P., Pritchard, M., ... & Eyring, V. (2024). Improving Atmospheric Processes in Earth System Models with Deep Learning Ensembles and Stochastic Parameterizations. arXiv preprint 2402.03079.](https://arxiv.org/abs/2402.03079)
 - [Rasp, S., Pritchard, M. S., & Gentine, P. (2018). Deep learning to represent subgrid processes in climate models. Proceedings of the national academy of sciences, 115(39), 9684-9689.](https://www.pnas.org/doi/full/10.1073/pnas.1810286115)  
 - [Iglesias‐Suarez, F., Gentine, P., Solino‐Fernandez, B., Beucler, T., Pritchard, M., Runge, J., & Eyring, V. (2024). Causally‐informed deep learning to improve climate models and projections. Journal of Geophysical Research: Atmospheres, 129(4), e2023JD039202.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023JD039202)
-- [Behrens, G., Beucler, T., Iglesias-Suarez, F., Yu, S., Gentine, P., Pritchard, M., ... & Eyring, V. (2024). Improving Atmospheric Processes in Earth System Models with Deep Learning Ensembles and Stochastic Parameterizations. arXiv preprint 2402.03079.](https://arxiv.org/abs/2402.03079)
 - [Ott, J., Pritchard, M., Best, N., Linstead, E., Curcic, M., & Baldi, P. (2020). A fortran‐keras deep learning bridge for scientific computing. Scientific Programming, 2020(1), 8888811.](https://onlinelibrary.wiley.com/doi/full/10.1155/2020/8888811)
 - [Beucler, T., Gentine, P., Yuval, J., Gupta, A., Peng, L., Lin, J., ... & Pritchard, M. (2024). Climate-invariant machine learning. Science Advances, 10(6), eadj7250.](https://www.science.org/doi/10.1126/sciadv.adj7250)
 - [Mooers, G., Pritchard, M., Beucler, T., Ott, J., Yacalis, G., Baldi, P., & Gentine, P. (2021). Assessing the potential of deep learning for emulating cloud superparameterization in climate models with real‐geography boundary conditions. Journal of Advances in Modeling Earth Systems, 13(5), e2020MS002385.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002385)
@@ -36,6 +41,8 @@ Cloud Brain (CBRAIN) aims to break the convective parameterization deadlock by t
 ***
 
 ## [CliMA](https://clima.caltech.edu/)
+
+The Climate Modeling Alliance (CliMA) is "building a new Earth system model that leverages recent advances in computational and data sciences to learn directly from a wealth of Earth observations from space and the ground." Its atmospheric component adopts a [generalized version of the Eddy-Diffusivity Mass-Flux framework](https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2017MS001162) and relies on Bayesian inference for parameter calibration and uncertainty quantification through the ["Calibrate, Emulate, Sample" framework](https://www.sciencedirect.com/science/article/abs/pii/S0021999120304903?via%3Dihub). Its oceanic component is based on the ["Oceananigans" model](https://joss.theoj.org/papers/10.21105/joss.02018), which is designed for the numerical simulation of incompressible, stratified, rotating fluid flows on CPUs and GPUs.
 
 ### Latest coupled simulations in [Christopoulos, C., Lopez-Gomez, I., Beucler, T., Cohen, Y., Kawczynski, C., Dunbar, O., & Schneider, T. (2024). Online Learning of Entrainment Closures in a Hybrid Machine Learning Parameterization. Authorea Preprints.](https://essopenarchive.org/doi/full/10.22541/essoar.171804905.55213571/)
 
@@ -59,7 +66,7 @@ Cloud Brain (CBRAIN) aims to break the convective parameterization deadlock by t
 
 ## ICON-ML
 
-### Latest coupled simulations in [Heuer, H., Schwabe, M., Gentine, P., Giorgetta, M. A., & Eyring, V. (2023). Interpretable multiscale Machine Learning-Based Parameterizations of Convection for ICON. arXiv preprint 2311.03251.](https://arxiv.org/abs/2311.03251)
+### Latest coupled simulations in [Heuer, H., Schwabe, M., Gentine, P., Giorgetta, M. A., & Eyring, V. (2024). Interpretable multiscale machine learning-based parameterizations of convection for ICON. Journal of Advances in Modeling Earth Systems, 16, e2024MS004398.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024MS004398)
 
 ### See also:
 - [Grundner, A., Beucler, T., Gentine, P., & Eyring, V. (2024). Data‐driven equation discovery of a cloud cover parameterization. Journal of Advances in Modeling Earth Systems, 16(3), e2023MS003763.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS003763)
@@ -86,12 +93,24 @@ FV3-GFS is the atmospheric component of the [Unified Forecast System (UFS)](http
 
 ## Hybrid SAM
 
-### Latest coupled simulations in [Yuval, J., O'Gorman, P. A., & Hill, C. N. (2021). Use of neural networks for stable, accurate and physically consistent parameterization of subgrid atmospheric processes with good performance at reduced precision. Geophysical Research Letters, 48(6), e2020GL091363.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL091363)
+### Latest coupled simulations in [Yuval, J., & O’Gorman, P. A. (2023). Neural‐network parameterization of subgrid momentum transport in the atmosphere. Journal of Advances in Modeling Earth Systems, 15(4), e2023MS003606.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003606)
 
 ### See also:
-- [Yuval, J., & O’Gorman, P. A. (2023). Neural‐network parameterization of subgrid momentum transport in the atmosphere. Journal of Advances in Modeling Earth Systems, 15(4), e2023MS003606.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003606)
+- [Yuval, J., O'Gorman, P. A., & Hill, C. N. (2021). Use of neural networks for stable, accurate and physically consistent parameterization of subgrid atmospheric processes with good performance at reduced precision. Geophysical Research Letters, 48(6), e2020GL091363.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL091363)
 - [Wang, P., Yuval, J., & O’Gorman, P. A. (2022). Non‐local parameterization of atmospheric subgrid processes with neural networks. Journal of Advances in Modeling Earth Systems, 14(10), e2022MS002984.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS002984)
 - [Yuval, J., & O’Gorman, P. A. (2020). Stable machine-learning parameterization of subgrid processes for climate modeling at a range of resolutions. Nature communications, 11(1), 3295.](https://www.nature.com/articles/s41467-020-17142-3)
+
+***
+
+## MOM6
+
+### Latest coupled simulations in [Gregory, W., Bushuk, M., Zhang, Y., Adcroft, A., & Zanna, L. (2024). Machine learning for online sea ice bias correction within global ice‐ocean simulations. Geophysical Research Letters, 51(3), e2023GL106776.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023GL106776)
+
+### See also:
+- [Zhang, C., Perezhogin, P., Gultekin, C., Adcroft, A., Fernandez‐Granda, C., & Zanna, L. (2023). Implementation and evaluation of a machine learned mesoscale eddy parameterization into a numerical ocean circulation model. Journal of Advances in Modeling Earth Systems, 15(10), e2023MS003697.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS003697)
+- [Perezhogin, P., Zhang, C., Adcroft, A., Fernandez-Granda, C., & Zanna, L. (2023). Implementation of a data-driven equation-discovery mesoscale parameterization into an ocean model. arXiv preprint 2311.02517.](https://arxiv.org/abs/2311.02517)  
+- [Sane, A., Reichl, B. G., Adcroft, A., & Zanna, L. (2023). Parameterizing vertical mixing coefficients in the ocean surface boundary layer using neural networks. Journal of Advances in Modeling Earth Systems, 15(10), e2023MS003890.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS003890)
+- [Partee, S., Ellis, M., Rigazzi, A., Shao, A. E., Bachman, S., Marques, G., & Robbins, B. (2022). Using machine learning at scale in numerical simulations with SmartSim: An application to ocean climate modeling. Journal of Computational Science, 62, 101707.](https://www.sciencedirect.com/science/article/pii/S1877750322001065#b35)
 
 ***
 
