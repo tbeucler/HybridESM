@@ -10,8 +10,8 @@ If you notice any errors, omissions, or outdated information, please feel free t
 - [CBRAIN](#cbrain)  
 - [CliMA](#clima)
 - [ClimSim](#climsim)
+- [Corrective ML](#corrective-ml)
 - [ICON-ML](#icon-ml)
-- [Hybrid FV3-GFS](#hybrid-fv3-gfs)
 - [Hybrid SAM](#hybrid-sam)
 - [MOM6](#mom6)
 - [NCAM](#ncam)
@@ -56,11 +56,31 @@ The Climate Modeling Alliance (CliMA) is "building a new Earth system model that
 
 ## [ClimSim](https://leap-stc.github.io/ClimSim/README.html)
 
+ClimSim, the first benchmark dataset for hybrid ML-physics climate emulation, includes simulation data from the [Energy Exascale Earth System Model Multi-scale Modeling Framework (E3SM-MMF)](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019MS001863). E3SM-MMF embeds GPU-accelerated cloud-resolving models within each grid cell of [E3SM](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018MS001350) and uses [explicit scalar momentum transport](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003206) to ensure the quality of subgrid-scale fluxes. ClimSim provides billions of multivariate input/output vector pairs, capturing the aggregate effect of cloud-resolving models on E3SM's macro-scale state. ClimSim also inspired a [Kaggle competition](https://www.kaggle.com/competitions/leap-atmospheric-physics-ai-climsim) and includes an end-to-end workflow for developing hybrid ML-physics simulators. 
+
 ### Latest coupled simulations in [Hu, Z., Subramaniam, A., Kuang, Z., Lin, J., Yu, S., Hannah, W. M., ... & Pritchard, M. S. (2024). Stable Machine-Learning Parameterization of Subgrid Processes with Real Geography and Full-physics Emulation. arXiv preprint 2407.00124.](https://arxiv.org/abs/2407.00124)
 
 ### See also:
 - [Yu, S., Hu, Z., Subramaniam, A., Hannah, W., Peng, L., Lin, J., Bhouri, M. A., Gupta, R., Lütjens, B., Will, J. C., Behrens, G., Busecke, J. J. M., Loose, N., Stern, C. I., Beucler, T., Harrop, B., Heuer, H., Hillman, B. R., Jenney, A., ... Pritchard, M. (2024). ClimSim-Online: A large multi-scale dataset and framework for hybrid ML-physics climate emulation. arXiv preprint 2306.08754](https://arxiv.org/abs/2306.08754)
 - [Yu, S., Hannah, W., Peng, L., Lin, J., Bhouri, M. A., Gupta, R., ... & Pritchard, M. (2024). ClimSim: A large multi-scale dataset for hybrid physics-ML climate emulation. Advances in Neural Information Processing Systems, 36.](https://neurips.cc/virtual/2023/poster/73569)
+
+***
+
+## Corrective ML
+
+Building on early efforts to enhance subgrid-scale physics through machine learning with near-global storm-resolving aquaplanet simulations, [AI2](https://allenai.org/climate-modeling) has developed a series of data-driven solutions to improve the (thermo)dynamics of FV3-GFS, the atmospheric component of the [Unified Forecast System (UFS)](https://zenodo.org/records/4460292). The latest efforts focused on learning apparent dynamic tendencies to nudge temperature and humidity toward a reference state derived from a [global storm-resolving GFDL X-SHiELD simulation](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2022JD037823), informally called "Corrective ML."
+
+### Latest coupled simulations in [Watt‐Meyer, O., Brenowitz, N. D., Clark, S. K., Henn, B., Kwa, A., McGibbon, J., ... & Bretherton, C. S. (2024). Neural network parameterization of subgrid‐scale physics from a realistic geography global storm‐resolving simulation. Journal of Advances in Modeling Earth Systems, 16(2), e2023MS003668.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003668)
+
+### See also:  
+- [Kwa, A., Clark, S. K., Henn, B., Brenowitz, N. D., McGibbon, J., Watt‐Meyer, O., ... & Bretherton, C. S. (2023). Machine‐learned climate model corrections from a global storm‐resolving model: Performance across the annual cycle. Journal of Advances in Modeling Earth Systems, 15(5), e2022MS003400.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003400)
+- [Clark, S. K., Brenowitz, N. D., Henn, B., Kwa, A., McGibbon, J., Perkins, W. A., ... & Harris, L. M. (2022). Correcting a 200 km resolution climate model in multiple climates by machine learning from 25 km resolution simulations. Journal of Advances in Modeling Earth Systems, 14(9), e2022MS003219.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003219)
+- [Bretherton, C. S., Henn, B., Kwa, A., Brenowitz, N. D., Watt‐Meyer, O., McGibbon, J., ... & Harris, L. (2022). Correcting coarse‐grid weather and climate models by machine learning from global storm‐resolving simulations. Journal of Advances in Modeling Earth Systems, 14(2), e2021MS002794.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021MS002794)
+- [Watt‐Meyer, O., Brenowitz, N. D., Clark, S. K., Henn, B., Kwa, A., McGibbon, J., ... & Bretherton, C. S. (2021). Correcting weather and climate models by machine learning nudged historical simulations. Geophysical Research Letters, 48(15), e2021GL092555.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021GL092555)
+- [Sanford, C., Kwa, A., Watt‐Meyer, O., Clark, S. K., Brenowitz, N., McGibbon, J., & Bretherton, C. (2023). Improving the reliability of ML‐corrected climate models with novelty detection. Journal of Advances in Modeling Earth Systems, 15(11), e2023MS003809.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003809)
+- [Brenowitz, N. D., Henn, B., McGibbon, J., Clark, S. K., Kwa, A., Perkins, W. A., ... & Bretherton, C. S. (2020). Machine learning climate model dynamics: Offline versus online performance. NeurIPS 2020 CCAI workshop.](https://arxiv.org/abs/2011.03081)
+- [Brenowitz, N. D., & Bretherton, C. S. (2019). Spatially extended tests of a neural network parametrization trained by coarse‐graining. Journal of Advances in Modeling Earth Systems, 11(8), 2728-2744.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019MS001711)
+- [Brenowitz, N. D., & Bretherton, C. S. (2018). Prognostic validation of a neural network unified physics parameterization. Geophysical Research Letters, 45(12), 6289-6298.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GL078510)
 
 ***
 
@@ -71,23 +91,6 @@ The Climate Modeling Alliance (CliMA) is "building a new Earth system model that
 ### See also:
 - [Grundner, A., Beucler, T., Gentine, P., & Eyring, V. (2024). Data‐driven equation discovery of a cloud cover parameterization. Journal of Advances in Modeling Earth Systems, 16(3), e2023MS003763.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS003763)
 - [Grundner, A., Beucler, T., Gentine, P., Iglesias‐Suarez, F., Giorgetta, M. A., & Eyring, V. (2022). Deep learning based cloud cover parameterization for ICON. Journal of Advances in Modeling Earth Systems, 14(12), e2021MS002959.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021MS002959)
-
-***
-
-## Hybrid FV3-GFS
-
-FV3-GFS is the atmospheric component of the [Unified Forecast System (UFS)](https://zenodo.org/records/4460292). 
-
-### Latest coupled simulations in [Watt‐Meyer, O., Brenowitz, N. D., Clark, S. K., Henn, B., Kwa, A., McGibbon, J., ... & Bretherton, C. S. (2024). Neural network parameterization of subgrid‐scale physics from a realistic geography global storm‐resolving simulation. Journal of Advances in Modeling Earth Systems, 16(2), e2023MS003668.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003668)
-
-### See also:  
-- [Kwa, A., Clark, S. K., Henn, B., Brenowitz, N. D., McGibbon, J., Watt‐Meyer, O., ... & Bretherton, C. S. (2023). Machine‐learned climate model corrections from a global storm‐resolving model: Performance across the annual cycle. Journal of Advances in Modeling Earth Systems, 15(5), e2022MS003400.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003400)
-- [Clark, S. K., Brenowitz, N. D., Henn, B., Kwa, A., McGibbon, J., Perkins, W. A., ... & Harris, L. M. (2022). Correcting a 200 km resolution climate model in multiple climates by machine learning from 25 km resolution simulations. Journal of Advances in Modeling Earth Systems, 14(9), e2022MS003219.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003219)
-- [Bretherton, C. S., Henn, B., Kwa, A., Brenowitz, N. D., Watt‐Meyer, O., McGibbon, J., ... & Harris, L. (2022). Correcting coarse‐grid weather and climate models by machine learning from global storm‐resolving simulations. Journal of Advances in Modeling Earth Systems, 14(2), e2021MS002794.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021MS002794)
-- [Watt‐Meyer, O., Brenowitz, N. D., Clark, S. K., Henn, B., Kwa, A., McGibbon, J., ... & Bretherton, C. S. (2021). Correcting weather and climate models by machine learning nudged historical simulations. Geophysical Research Letters, 48(15), e2021GL092555.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021GL092555)
-- [Brenowitz, N. D., Henn, B., McGibbon, J., Clark, S. K., Kwa, A., Perkins, W. A., ... & Bretherton, C. S. (2020). Machine learning climate model dynamics: Offline versus online performance. NeurIPS 2020 CCAI workshop.](https://arxiv.org/abs/2011.03081)
-- [Brenowitz, N. D., & Bretherton, C. S. (2019). Spatially extended tests of a neural network parametrization trained by coarse‐graining. Journal of Advances in Modeling Earth Systems, 11(8), 2728-2744.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019MS001711)
-- [Brenowitz, N. D., & Bretherton, C. S. (2018). Prognostic validation of a neural network unified physics parameterization. Geophysical Research Letters, 45(12), 6289-6298.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GL078510)
 
 ***
 
