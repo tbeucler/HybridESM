@@ -7,15 +7,29 @@ If you notice any errors, omissions, or outdated information, please feel free t
 <ins>Author</ins>: Tom Beucler (UNIL); written in the context of [AI4PEX](https://ai4pex.org/).
 
 ## Table of Contents
+- [ACE](#ace)
 - [CBRAIN](#cbrain)  
 - [CliMA](#clima)
 - [ClimSim](#climsim)
 - [Corrective ML](#corrective-ml)
 - [ICON-ML](#icon-ml)
-- [Hybrid SAM](#hybrid-sam)
+- [Hybrid ARP-GEM](#hybrid-arp-gem)
+- [Hybrid SAM](#hybrid-sam)  
 - [MOM6](#mom6)
 - [NCAM](#ncam)
 - [NeuralGCM](#neuralgcm)
+
+***
+
+## ACE
+
+The [AI2](https://allenai.org/climate-modeling) Climate Emulator (ACE) emulates [NOAA](https://www.noaa.gov/)'s [FV3GFS atmospheric model](https://journals.ametsoc.org/view/journals/bams/100/7/bams-d-17-0246.1.xml) using spherical Fourier neural operators. ACE operates with six prognostic variables, can be forced through insolation and sea surface skin temperature, diagnoses radiative and energy fluxes at the atmosphere's boundaries, and runs on a single GPU. ACE2 improves upon ACE by enforcing global conservation of dry air mass and humidity, making it a hybrid climate model and improving climate stability and surface pressure representation. ACE2, which can be coupled to a slab ocean, is trained and tested on historical climate reanalysis (1940-2020) and 100 km-resolution [Unified Forecast System (UFS)](https://zenodo.org/records/4460292) simulations forced by historical sea surface temperatures and greenhouse gas concentrations.
+
+### Latest coupled simulations in [ACE2's recent conference presentation (03:44:00)](https://zoom.us/clips/share/0ms4Ou0IvUDafZjahr026aqO8IwsZ62yvdWjKMvog0B1GqxB7bwQ5zUfYIXYUHeUbKDAPA.yQZm_Xanr8mUU5AB).
+
+### See also:
+- [Duncan, J. P., Wu, E., Golaz, J. C., Caldwell, P. M., Watt‐Meyer, O., Clark, S. K., ... & Bretherton, C. S. (2024). Application of the AI2 Climate Emulator to E3SMv2's global atmosphere model, with a focus on precipitation fidelity. Journal of Geophysical Research: Machine Learning and Computation, 1(3), e2024JH000136.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024JH000136)
+- [Watt-Meyer, O., Dresdner, G., McGibbon, J., Clark, S. K., Henn, B., Duncan, J., ... & Bretherton, C. S. (2023). ACE: A fast, skillful learned global atmospheric model for climate prediction. arXiv preprint 2310.02074.](https://arxiv.org/abs/2310.02074)
 
 ***
 
@@ -91,6 +105,14 @@ Building on early efforts to enhance subgrid-scale physics through machine learn
 ### See also:
 - [Grundner, A., Beucler, T., Gentine, P., & Eyring, V. (2024). Data‐driven equation discovery of a cloud cover parameterization. Journal of Advances in Modeling Earth Systems, 16(3), e2023MS003763.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS003763)
 - [Grundner, A., Beucler, T., Gentine, P., Iglesias‐Suarez, F., Giorgetta, M. A., & Eyring, V. (2022). Deep learning based cloud cover parameterization for ICON. Journal of Advances in Modeling Earth Systems, 14(12), e2021MS002959.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021MS002959)
+
+***
+
+## Hybrid ARP-GEM
+
+Hybrid ARP-GEM1 combines the dynamical core of the new global atmospheric model [ARP-GEM1](https://arxiv.org/abs/2409.19083) (Global, Efficient, and Multiscale version of [ARPEGE]( https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002075) version 1) with neural network-based parameterizations. It employs the Message Passing Interface-based “field-exchange” method [OASIS3]( https://gitlab.com/cerfacs/oasis3-mct/-/tree/OASIS3-MCT_5.0), enabling neural network integration on heterogenous High-Performance Computing (HPC) architectures. Initial prototypes emulate deep learning parameterization, and Hybrid ARP-GEM1's modular design enables the coupling of diverse data-driven parameterizations in the near term.
+
+### Latest coupled simulations in [Balogh, B., Saint-Martin, D., & Geoffroy, O. (2024). Online test of a neural network deep convection parameterization in ARP-GEM1. arXiv preprint 2410.21920](https://arxiv.org/abs/2410.21920)
 
 ***
 
