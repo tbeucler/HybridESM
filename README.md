@@ -160,3 +160,6 @@ Hybrid ARP-GEM1 combines the dynamical core of the new global atmospheric model 
 ## CAM / CESM 
 
 - [Gettelman, A., Gagne, D. J., Chen, C. C., Christensen, M. W., Lebo, Z. J., Morrison, H., & Gantos, G. (2021). Machine learning the warm rain process. Journal of Advances in Modeling Earth Systems, 13(2), e2020MS002268.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002268)
+
+## WRF
+[Georgakaki, P., & Nenes, A. (2024). RaFSIP: Parameterizing ice multiplication in models using a machine learning approach. Journal of Advances in Modeling Earth Systems, 16(6), e2023MS003923.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS003923)
