@@ -96,6 +96,9 @@ Building on early efforts to enhance subgrid-scale physics through machine learn
 - [Brenowitz, N. D., Henn, B., McGibbon, J., Clark, S. K., Kwa, A., Perkins, W. A., ... & Bretherton, C. S. (2020). Machine learning climate model dynamics: Offline versus online performance. NeurIPS 2020 CCAI workshop.](https://arxiv.org/abs/2011.03081)
 - [Brenowitz, N. D., & Bretherton, C. S. (2019). Spatially extended tests of a neural network parametrization trained by coarse‐graining. Journal of Advances in Modeling Earth Systems, 11(8), 2728-2744.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019MS001711)
 - [Brenowitz, N. D., & Bretherton, C. S. (2018). Prognostic validation of a neural network unified physics parameterization. Geophysical Research Letters, 45(12), 6289-6298.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GL078510)
+- [Gregory, W., Bushuk, M., Zhang, Y., Adcroft, A., & Zanna, L. (2024). Machine learning for online sea ice bias correction within global ice‐ocean simulations. Geophysical Research Letters, 51(3), e2023GL106776.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023GL106776)
+- [Chapman, W. E., & Berner, J. (2024). A State-Dependent Model-Error Representation for Online Climate Model Bias Correction. Authorea Preprints.](https://essopenarchive.org/doi/full/10.22541/essoar.172526800.05354621)
+- [Chen, Tse‐Chun, et al. "Correcting systematic and state‐dependent errors in the NOAA FV3‐GFS using neural networks." Journal of Advances in Modeling Earth Systems 14.11 (2022): e2022MS003309.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003309)
 
 ***
 
@@ -154,3 +157,6 @@ Hybrid ARP-GEM1 combines the dynamical core of the new global atmospheric model 
 
 ### Latest coupled simulations in [Kochkov, D., Yuval, J., Langmore, I., Norgaard, P., Smith, J., Mooers, G., ... & Hoyer, S. (2024). Neural general circulation models for weather and climate. Nature, 1-7.](https://www.nature.com/articles/s41586-024-07744-y)
 
+## CAM / CESM 
+
+- [Gettelman, A., Gagne, D. J., Chen, C. C., Christensen, M. W., Lebo, Z. J., Morrison, H., & Gantos, G. (2021). Machine learning the warm rain process. Journal of Advances in Modeling Earth Systems, 13(2), e2020MS002268.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002268)
