@@ -154,3 +154,5 @@ Hybrid ARP-GEM1 combines the dynamical core of the new global atmospheric model 
 
 ### Latest coupled simulations in [Kochkov, D., Yuval, J., Langmore, I., Norgaard, P., Smith, J., Mooers, G., ... & Hoyer, S. (2024). Neural general circulation models for weather and climate. Nature, 1-7.](https://www.nature.com/articles/s41586-024-07744-y)
 
+### See also:  
+- [Yuval, J., Langmore, I., Kochkov, D., & Hoyer, S. (2024). Neural general circulation models optimized to predict satellite-based precipitation observations. arXiv preprint 2412.11973](https://arxiv.org/abs/2412.11973).
