@@ -12,7 +12,7 @@ If you notice any errors, omissions, or outdated information, please feel free t
 - [CliMA](#clima)
 - [ClimSim](#climsim)
 - [Corrective ML](#corrective-ml)
-- [DLESyM](#DLESyM)
+- [DLESyM](#dlesym)
 - [Hybrid ARP-GEM](#hybrid-arp-gem)
 - [Hybrid CAM](#hybrid-cam)
 - [Hybrid SAM](#hybrid-sam)
@@ -30,7 +30,7 @@ If you notice any errors, omissions, or outdated information, please feel free t
 
 The [AI2](https://allenai.org/climate-modeling) Climate Emulator (ACE) emulates [NOAA](https://www.noaa.gov/)'s [FV3GFS atmospheric model](https://journals.ametsoc.org/view/journals/bams/100/7/bams-d-17-0246.1.xml) using spherical Fourier neural operators. ACE operates with six prognostic variables, can be forced through insolation and sea surface skin temperature, diagnoses radiative and energy fluxes at the atmosphere's boundaries, and runs on a single GPU. ACE2 improves upon ACE by enforcing global conservation of dry air mass and humidity, making it a hybrid climate model and improving climate stability and surface pressure representation. ACE2, which can be coupled to a slab ocean, is trained and tested on historical climate reanalysis (1940-2020) and 100 km-resolution [Unified Forecast System (UFS)](https://zenodo.org/records/4460292) simulations forced by historical sea surface temperatures and greenhouse gas concentrations.
 
-### Latest coupled simulations in [Clark, S. K., Watt-Meyer, O., Kwa, A., McGibbon, J., Henn, B., Perkins, W. A., ... & Harris, L. M. (2024). ACE2-SOM: Coupling to a slab ocean and learning the sensitivity of climate to changes in $\mathrm{CO}_2$. arXiv:2412.04418](https://arxiv.org/abs/2412.04418).
+### Latest coupled simulations in [Clark, S. K., Watt-Meyer, O., Kwa, A., McGibbon, J., Henn, B., Perkins, W. A., ... & Harris, L. M. (2024). ACE2-SOM: Coupling to a slab ocean and learning the sensitivity of climate to changes in CO2. arXiv:2412.04418](https://arxiv.org/abs/2412.04418).
 
 ### See also:
 - [Watt-Meyer, O., Henn, B., McGibbon, J., Clark, S. K., Kwa, A., Perkins, W. A., Wu, E., Harris, L., & Bretherton, C. S. (2024). ACE2: Accurately learning subseasonal to decadal atmospheric variability and forced responses. arXiv 2411.11268](https://arxiv.org/abs/2411.11268)
