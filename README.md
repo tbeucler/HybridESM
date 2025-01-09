@@ -12,12 +12,17 @@ If you notice any errors, omissions, or outdated information, please feel free t
 - [CliMA](#clima)
 - [ClimSim](#climsim)
 - [Corrective ML](#corrective-ml)
-- [ICON-ML](#icon-ml)
+- [DLESyM](#DLESyM)
 - [Hybrid ARP-GEM](#hybrid-arp-gem)
-- [Hybrid SAM](#hybrid-sam)  
+- [Hybrid CAM](#hybrid-cam)
+- [Hybrid SAM](#hybrid-sam)
+- [Hybrid WRF](#hybrid-wrf)  
+- [ICON-ML](#icon-ml)
+- [LUCIE](#lucie)
 - [MOM6](#mom6)
 - [NCAM](#ncam)
 - [NeuralGCM](#neuralgcm)
+- [Samudra](#samudra)
 
 ***
 
@@ -91,11 +96,59 @@ Building on early efforts to enhance subgrid-scale physics through machine learn
 - [Kwa, A., Clark, S. K., Henn, B., Brenowitz, N. D., McGibbon, J., Watt‐Meyer, O., ... & Bretherton, C. S. (2023). Machine‐learned climate model corrections from a global storm‐resolving model: Performance across the annual cycle. Journal of Advances in Modeling Earth Systems, 15(5), e2022MS003400.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003400)
 - [Clark, S. K., Brenowitz, N. D., Henn, B., Kwa, A., McGibbon, J., Perkins, W. A., ... & Harris, L. M. (2022). Correcting a 200 km resolution climate model in multiple climates by machine learning from 25 km resolution simulations. Journal of Advances in Modeling Earth Systems, 14(9), e2022MS003219.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003219)
 - [Bretherton, C. S., Henn, B., Kwa, A., Brenowitz, N. D., Watt‐Meyer, O., McGibbon, J., ... & Harris, L. (2022). Correcting coarse‐grid weather and climate models by machine learning from global storm‐resolving simulations. Journal of Advances in Modeling Earth Systems, 14(2), e2021MS002794.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021MS002794)
+- [Chen, T. C., Penny, S. G., Whitaker, J. S., Frolov, S., Pincus, R., & Tulich, S. (2022). Correcting systematic and state‐dependent errors in the NOAA FV3‐GFS using neural networks. Journal of Advances in Modeling Earth Systems, 14(11), e2022MS003309.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003309)
 - [Watt‐Meyer, O., Brenowitz, N. D., Clark, S. K., Henn, B., Kwa, A., McGibbon, J., ... & Bretherton, C. S. (2021). Correcting weather and climate models by machine learning nudged historical simulations. Geophysical Research Letters, 48(15), e2021GL092555.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021GL092555)
 - [Sanford, C., Kwa, A., Watt‐Meyer, O., Clark, S. K., Brenowitz, N., McGibbon, J., & Bretherton, C. (2023). Improving the reliability of ML‐corrected climate models with novelty detection. Journal of Advances in Modeling Earth Systems, 15(11), e2023MS003809.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003809)
 - [Brenowitz, N. D., Henn, B., McGibbon, J., Clark, S. K., Kwa, A., Perkins, W. A., ... & Bretherton, C. S. (2020). Machine learning climate model dynamics: Offline versus online performance. NeurIPS 2020 CCAI workshop.](https://arxiv.org/abs/2011.03081)
 - [Brenowitz, N. D., & Bretherton, C. S. (2019). Spatially extended tests of a neural network parametrization trained by coarse‐graining. Journal of Advances in Modeling Earth Systems, 11(8), 2728-2744.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019MS001711)
 - [Brenowitz, N. D., & Bretherton, C. S. (2018). Prognostic validation of a neural network unified physics parameterization. Geophysical Research Letters, 45(12), 6289-6298.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GL078510)
+
+***
+
+## DLESyM
+
+### Latest coupled simulations in [Cresswell-Clay, N., Liu, B., Durran, D., Liu, A., Espinosa, Z. I., Moreno, R., & Karlbauer, M. (2024). A deep learning earth system model for stable and efficient simulation of the current climate. arXiv preprint 2409.16247.](https://arxiv.org/abs/2409.16247)
+
+### See also:
+- [Wang, C., Pritchard, M. S., Brenowitz, N., Cohen, Y., Bonev, B., Kurth, T., ... & Pathak, J. (2024). Coupled Ocean-Atmosphere Dynamics in a Machine Learning Earth System Model. arXiv preprint 2406.08632.](https://arxiv.org/abs/2406.08632)
+
+***
+
+## Hybrid ARP-GEM
+
+Hybrid ARP-GEM1 combines the dynamical core of the new global atmospheric model [ARP-GEM1](https://arxiv.org/abs/2409.19083) (Global, Efficient, and Multiscale version of [ARPEGE]( https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002075) version 1) with neural network-based parameterizations. It employs the Python interface of the Message Passing Interface-based “field-exchange” method [OASIS3]( https://gitlab.com/cerfacs/oasis3-mct/-/tree/OASIS3-MCT_5.0), enabling neural network integration on heterogenous High-Performance Computing (HPC) architectures. Initial prototypes emulate deep learning parameterization, and Hybrid ARP-GEM1's modular design enables the coupling of diverse data-driven parameterizations in the near term.
+
+### Latest coupled simulations in [Balogh, B., Saint-Martin, D., & Geoffroy, O. (2024). Online test of a neural network deep convection parameterization in ARP-GEM1. arXiv preprint 2410.21920](https://arxiv.org/abs/2410.21920)
+
+***
+
+## Hybrid CAM
+
+### Latest coupled simulations in [Chapman, W. E., & Berner, J. (2024). A State-Dependent Model-Error Representation for Online Climate Model Bias Correction. Authorea Preprints.](https://essopenarchive.org/doi/full/10.22541/essoar.172526800.05354621)
+
+### See also: 
+- [Gettelman, A., Gagne, D. J., Chen, C. C., Christensen, M. W., Lebo, Z. J., Morrison, H., & Gantos, G. (2021). Machine learning the warm rain process. Journal of Advances in Modeling Earth Systems, 13(2), e2020MS002268.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002268)
+- [Limon, G. C., & Jablonowski, C. (2023). Probing the skill of random forest emulators for physical parameterizations via a hierarchy of simple CAM6 configurations. Journal of Advances in Modeling Earth Systems, 15(6), e2022MS003395.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003395)
+
+***
+
+## Hybrid SAM
+
+### Latest coupled simulations in [Yuval, J., & O’Gorman, P. A. (2023). Neural‐network parameterization of subgrid momentum transport in the atmosphere. Journal of Advances in Modeling Earth Systems, 15(4), e2023MS003606.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003606)
+
+### See also:
+- [Yuval, J., O'Gorman, P. A., & Hill, C. N. (2021). Use of neural networks for stable, accurate and physically consistent parameterization of subgrid atmospheric processes with good performance at reduced precision. Geophysical Research Letters, 48(6), e2020GL091363.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL091363)
+- [Wang, P., Yuval, J., & O’Gorman, P. A. (2022). Non‐local parameterization of atmospheric subgrid processes with neural networks. Journal of Advances in Modeling Earth Systems, 14(10), e2022MS002984.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS002984)
+- [Yuval, J., & O’Gorman, P. A. (2020). Stable machine-learning parameterization of subgrid processes for climate modeling at a range of resolutions. Nature communications, 11(1), 3295.](https://www.nature.com/articles/s41467-020-17142-3)
+
+***
+
+## Hybrid WRF
+
+### See:
+- [Georgakaki, P., & Nenes, A. (2024). RaFSIP: Parameterizing ice multiplication in models using a machine learning approach. Journal of Advances in Modeling Earth Systems, 16(6), e2023MS003923.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS003923)
+- [Zhong, X., Yu, X., & Li, H. (2024). Machine learning parameterization of the multi-scale Kain–Fritsch (MSKF) convection scheme and stable simulation coupled in the Weather Research and Forecasting (WRF) model using WRF–ML v1. 0. Geoscientific Model Development, 17(9), 3667-3685.](https://gmd.copernicus.org/articles/17/3667/2024/)
+- [Zhong, X., Ma, Z., Yao, Y., Xu, L., Wu, Y., & Wang, Z. (2023). WRF–ML v1. 0: a bridge between WRF v4. 3 and machine learning parameterizations and its application to atmospheric radiative transfer. Geoscientific Model Development, 16(1), 199-209.](https://gmd.copernicus.org/articles/16/199/2023/)
 
 ***
 
@@ -109,22 +162,12 @@ Building on early efforts to enhance subgrid-scale physics through machine learn
 
 ***
 
-## Hybrid ARP-GEM
+## LUCIE
 
-Hybrid ARP-GEM1 combines the dynamical core of the new global atmospheric model [ARP-GEM1](https://arxiv.org/abs/2409.19083) (Global, Efficient, and Multiscale version of [ARPEGE]( https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002075) version 1) with neural network-based parameterizations. It employs the Python interface of the Message Passing Interface-based “field-exchange” method [OASIS3]( https://gitlab.com/cerfacs/oasis3-mct/-/tree/OASIS3-MCT_5.0), enabling neural network integration on heterogenous High-Performance Computing (HPC) architectures. Initial prototypes emulate deep learning parameterization, and Hybrid ARP-GEM1's modular design enables the coupling of diverse data-driven parameterizations in the near term.
-
-### Latest coupled simulations in [Balogh, B., Saint-Martin, D., & Geoffroy, O. (2024). Online test of a neural network deep convection parameterization in ARP-GEM1. arXiv preprint 2410.21920](https://arxiv.org/abs/2410.21920)
-
-***
-
-## Hybrid SAM
-
-### Latest coupled simulations in [Yuval, J., & O’Gorman, P. A. (2023). Neural‐network parameterization of subgrid momentum transport in the atmosphere. Journal of Advances in Modeling Earth Systems, 15(4), e2023MS003606.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003606)
+### Latest coupled simulations in [Guan, H., Arcomano, T., Chattopadhyay, A., & Maulik, R. (2024). LUCIE: A Lightweight Uncoupled ClImate Emulator with long-term stability and physical consistency for O (1000)-member ensembles. arXiv preprint 2405.16297.](https://arxiv.org/abs/2405.16297)
 
 ### See also:
-- [Yuval, J., O'Gorman, P. A., & Hill, C. N. (2021). Use of neural networks for stable, accurate and physically consistent parameterization of subgrid atmospheric processes with good performance at reduced precision. Geophysical Research Letters, 48(6), e2020GL091363.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL091363)
-- [Wang, P., Yuval, J., & O’Gorman, P. A. (2022). Non‐local parameterization of atmospheric subgrid processes with neural networks. Journal of Advances in Modeling Earth Systems, 14(10), e2022MS002984.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS002984)
-- [Yuval, J., & O’Gorman, P. A. (2020). Stable machine-learning parameterization of subgrid processes for climate modeling at a range of resolutions. Nature communications, 11(1), 3295.](https://www.nature.com/articles/s41467-020-17142-3)
+- [Arcomano, T., Szunyogh, I., Wikner, A., Hunt, B. R., & Ott, E. (2023). A hybrid atmospheric model incorporating machine learning can capture dynamical processes not captured by its physics‐based component. Geophysical Research Letters, 50(8), e2022GL102649.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022GL102649)
 
 ***
 
@@ -156,3 +199,9 @@ Hybrid ARP-GEM1 combines the dynamical core of the new global atmospheric model 
 
 ### See also:  
 - [Yuval, J., Langmore, I., Kochkov, D., & Hoyer, S. (2024). Neural general circulation models optimized to predict satellite-based precipitation observations. arXiv preprint 2412.11973](https://arxiv.org/abs/2412.11973).
+
+***
+
+## Samudra
+
+### Latest coupled simulations in [Dheeshjith, S., Subel, A., Adcroft, A., Busecke, J., Fernandez-Granda, C., Gupta, S., & Zanna, L. (2024). Samudra: An AI Global Ocean Emulator for Climate. arXiv preprint 2412.03795.](https://arxiv.org/abs/2412.03795)
