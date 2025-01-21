@@ -15,6 +15,7 @@ If you notice any errors, omissions, or outdated information, please feel free t
 - [DLESyM](#dlesym)
 - [Hybrid ARP-GEM](#hybrid-arp-gem)
 - [Hybrid CAM](#hybrid-cam)
+- [Hybrid LSM](#hybrid-land-surface-modeling)
 - [Hybrid SAM](#hybrid-sam)
 - [Hybrid WRF](#hybrid-wrf)  
 - [ICON-ML](#icon-ml)
@@ -129,6 +130,12 @@ Hybrid ARP-GEM1 combines the dynamical core of the new global atmospheric model 
 ### See also: 
 - [Gettelman, A., Gagne, D. J., Chen, C. C., Christensen, M. W., Lebo, Z. J., Morrison, H., & Gantos, G. (2021). Machine learning the warm rain process. Journal of Advances in Modeling Earth Systems, 13(2), e2020MS002268.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002268)
 - [Limon, G. C., & Jablonowski, C. (2023). Probing the skill of random forest emulators for physical parameterizations via a hierarchy of simple CAM6 configurations. Journal of Advances in Modeling Earth Systems, 15(6), e2022MS003395.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003395)
+
+***
+
+## Hybrid Land Surface Modeling
+
+### Latest coupled simulations in [Son, R., Stacke, T., Gayler, V., Nabel, J. E., Schnur, R., Alonso, L., ... & Carvalhais, N. (2024). Integration of a Deep‐Learning‐Based Fire Model Into a Global Land Surface Model. Journal of Advances in Modeling Earth Systems, 16(1), e2023MS003710.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003710)
 
 ***
 
