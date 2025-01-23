@@ -135,11 +135,15 @@ Hybrid ARP-GEM1 combines the dynamical core of the new global atmospheric model 
 
 ## Hybrid Land Surface Modeling
 
-### Latest coupled simulations in [Son, R., Stacke, T., Gayler, V., Nabel, J. E., Schnur, R., Alonso, L., ... & Carvalhais, N. (2024). Integration of a Deep‐Learning‐Based Fire Model Into a Global Land Surface Model. Journal of Advances in Modeling Earth Systems, 16(1), e2023MS003710.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003710)
+More coming soon.
+
+### See: [Son, R., Stacke, T., Gayler, V., Nabel, J. E., Schnur, R., Alonso, L., ... & Carvalhais, N. (2024). Integration of a Deep‐Learning‐Based Fire Model Into a Global Land Surface Model. Journal of Advances in Modeling Earth Systems, 16(1), e2023MS003710.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003710)
 
 ***
 
 ## Hybrid SAM
+
+Using the [hypohydrostatic configuration](https://journals.ametsoc.org/view/journals/atsc/73/2/jas-d-15-0049.1.xml) of the [System for Atmospheric Modeling (SAM)](https://you.stonybrook.edu/somas/sam/), quasi-global aquaplanet simulations can represent convection and large-scale circulation simultaneously at horizontal resolutions as coarse as 12 km. This provides an ideal testbed for machine learning parameterization approaches, such as leveraging [non-local information across grid columns to model subgrid momentum fluxes](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS002984), employing [reduced-precision computations](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL091363), and making parameterizations [scale-aware](https://www.nature.com/articles/s41467-020-17142-3). Numerical stability is ensured through a per-process flux prediction framework and a short integration timestep, which allow the use of tailored SAM prognostic equations and precipitation diagnostics. 
 
 ### Latest coupled simulations in [Yuval, J., & O’Gorman, P. A. (2023). Neural‐network parameterization of subgrid momentum transport in the atmosphere. Journal of Advances in Modeling Earth Systems, 15(4), e2023MS003606.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003606)
 
@@ -201,6 +205,8 @@ Hybrid ARP-GEM1 combines the dynamical core of the new global atmospheric model 
 ***
 
 ## [NeuralGCM](https://neuralgcm.readthedocs.io/en/latest/)
+
+The Neural General Circulation Model (NeuralGCM) is based on a differentiable pseudo-spectral [dynamical core implemented in JAX](https://github.com/neuralgcm/dinosaur). Processes not represented by the core are learned in an end-to-end manner using a single-column parameterization that optimizes [medium-range weather forecasting](https://github.com/google-research/weatherbench2). NeuralGCM enables stable, multi-decadal simulations of climate variability under prescribed sea surface temperatures and is being updated to accurately simulate [observed global precipitation fields](https://arxiv.org/abs/2412.11973). 
 
 ### Latest coupled simulations in [Kochkov, D., Yuval, J., Langmore, I., Norgaard, P., Smith, J., Mooers, G., ... & Hoyer, S. (2024). Neural general circulation models for weather and climate. Nature, 1-7.](https://www.nature.com/articles/s41586-024-07744-y)
 
