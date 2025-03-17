@@ -125,7 +125,7 @@ Hybrid ARP-GEM1 combines the dynamical core of the new global atmospheric model 
 
 ## Hybrid CAM
 
-### Latest coupled simulations in [Chapman, W. E., & Berner, J. (2024). A State-Dependent Model-Error Representation for Online Climate Model Bias Correction. Authorea Preprints.](https://essopenarchive.org/doi/full/10.22541/essoar.172526800.05354621)
+### Latest coupled simulations in [Chapman, W. E., & Berner, J. (2025). Improving climate bias and variability via CNN-based state-dependent model-error corrections. Geophysical Research Letters, 52, e2024GL114106.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL114106)
 
 ### See also: 
 - [Gettelman, A., Gagne, D. J., Chen, C. C., Christensen, M. W., Lebo, Z. J., Morrison, H., & Gantos, G. (2021). Machine learning the warm rain process. Journal of Advances in Modeling Earth Systems, 13(2), e2020MS002268.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002268)
