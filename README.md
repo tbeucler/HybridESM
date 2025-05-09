@@ -8,6 +8,7 @@ If you notice any errors, omissions, or outdated information, please feel free t
 
 ## Table of Contents
 - [ACE](#ace)
+- [CAMulator](#camulator)
 - [CBRAIN](#cbrain)  
 - [CliMA](#clima)
 - [ClimSim](#climsim)
@@ -37,6 +38,14 @@ The [AI2](https://allenai.org/climate-modeling) Climate Emulator (ACE) emulates 
 - [Watt-Meyer, O., Henn, B., McGibbon, J., Clark, S. K., Kwa, A., Perkins, W. A., Wu, E., Harris, L., & Bretherton, C. S. (2024). ACE2: Accurately learning subseasonal to decadal atmospheric variability and forced responses. arXiv 2411.11268](https://arxiv.org/abs/2411.11268)
 - [Duncan, J. P., Wu, E., Golaz, J. C., Caldwell, P. M., Watt‐Meyer, O., Clark, S. K., ... & Bretherton, C. S. (2024). Application of the AI2 Climate Emulator to E3SMv2's global atmosphere model, with a focus on precipitation fidelity. Journal of Geophysical Research: Machine Learning and Computation, 1(3), e2024JH000136.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024JH000136)
 - [Watt-Meyer, O., Dresdner, G., McGibbon, J., Clark, S. K., Henn, B., Duncan, J., ... & Bretherton, C. S. (2023). ACE: A fast, skillful learned global atmospheric model for climate prediction. arXiv preprint 2310.02074.](https://arxiv.org/abs/2310.02074)
+
+***
+
+## CAMulator
+
+CAMulator v1 is a machine-learned emulator of the [Community Atmosphere Model v6 (CAM6)](https://www.cesm.ucar.edu/models/cam) that predicts atmospheric states from sea surface temperatures and solar radiation. It conserves key physical quantities, captures major climate patterns like ENSO and NAO, and runs 350× faster than CAM6—enabling large-scale, physically grounded climate simulations. While it exhibits a cold bias in high-latitude winters outside its training range, CAMulator represents a major advance toward fast, realistic ML-based climate modeling.
+
+### Latest coupled simulations in [Chapman, W. E., Schreck, J. S., Sha, Y., Gagne II, D. J., Kimpara, D., Zanna, L., ... & Berner, J. (2025). CAMulator: Fast Emulation of the Community Atmosphere Model. arXiv preprint 2504.06007.](https://arxiv.org/abs/2504.06007)
 
 ***
 
@@ -195,6 +204,8 @@ Using the [hypohydrostatic configuration](https://journals.ametsoc.org/view/jour
 ***
 
 ## NCAM
+
+The Neural Community Atmosphere Model (NCAM) uses a real geography setup and combines residual and convolutional strategies, with memory (two time steps are sufficient). It replaces only the moist physics components of CAM, including deep and shallow convection and latent heating from microphysics, but does not replace radiation. 
 
 ### Latest coupled simulations in [Han, Y., Zhang, G. J., & Wang, Y. (2023). An ensemble of neural networks for moist physics processes, its generalizability and stable integration. Journal of Advances in Modeling Earth Systems, 15(10), e2022MS003508.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003508)
 
