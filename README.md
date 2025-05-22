@@ -1,10 +1,16 @@
 # Towards Hybrid Earth System Modeling: A Living Review
 
-This page reviews and organizes emerging hybrid Earth System Models (ESMs), which combine Machine Learning (ML) and physics-based components, alphabetically. Hybrid ESMs retain essential components for physical consistency (e.g., the dynamical core) while using ML to enhance parameterizations for small-scale processes (e.g., clouds). These models hold promise for improving long-term projections of Earth's physical climate and biogeochemical cycles.
+This page presents an alphabetical review of emerging hybrid Earth System Models (ESMs), which combine Machine Learning (ML) and physics-based components to simulate the full time evolution of climate variables in response to diverse forcings. These models hold promise for improving long-term projections of Earth's physical climate and biogeochemical cycles. Although new creative approaches continue to emerge, most designs fall into two broad categories:
+
+1. **Hybridizing existing ESMs**  
+These approaches build on established ESM codebases, retaining key physics components (e.g., the dynamical core) while replacing or improving parameterizations of hard-to-model processes (e.g., storm formation) with ML. This often involves interfacing Fortran-based codebases with Python-based ML tools. For related technical resources, see [this living review](https://github.com/TRACCS-COMPACT/hybrid_physics_AI_awesome_list/).
+
+2. **Developing data-driven climate models from scratch**  
+Usually referred to as "climate emulators," these efforts write prognostic equations directly in differentiable programming frameworks, incorporating explicit physical laws (e.g., conservation equations) only when needed. This is a longer-term endeavor, involving the progressive development and coupling of the atmosphere–ocean–land–cryosphere components.
 
 If you notice any errors, omissions, or outdated information, please feel free to submit a pull request.
 
-<ins>Author</ins>: Tom Beucler (UNIL); written in the context of [AI4PEX](https://ai4pex.org/).
+<ins>Author</ins>: Tom Beucler (UNIL); written in the context of [AI4PEX](https://ai4pex.org/) and the [WCRP Lighthouse Activities](https://www.wcrp-climate.org/lha-overview).
 
 ## Table of Contents
 - [ACE](#ace)
@@ -15,7 +21,6 @@ If you notice any errors, omissions, or outdated information, please feel free t
 - [Corrective ML](#corrective-ml)
 - [DLESyM](#dlesym)
 - [Hybrid ARP-GEM](#hybrid-arp-gem)
-- [Hybrid CAM](#hybrid-cam)
 - [Hybrid LSM](#hybrid-land-surface-modeling)
 - [Hybrid SAM](#hybrid-sam)
 - [Hybrid WRF](#hybrid-wrf)  
@@ -46,6 +51,11 @@ The [AI2](https://allenai.org/climate-modeling) Climate Emulator (ACE) emulates 
 CAMulator v1 is a machine-learned emulator of the [Community Atmosphere Model v6 (CAM6)](https://www.cesm.ucar.edu/models/cam) that predicts atmospheric states from sea surface temperatures and solar radiation. It conserves key physical quantities, captures major climate patterns like ENSO and NAO, and runs 350× faster than CAM6—enabling large-scale, physically grounded climate simulations. While it exhibits a cold bias in high-latitude winters outside its training range, CAMulator represents a major advance toward fast, realistic ML-based climate modeling.
 
 ### Latest coupled simulations in [Chapman, W. E., Schreck, J. S., Sha, Y., Gagne II, D. J., Kimpara, D., Zanna, L., ... & Berner, J. (2025). CAMulator: Fast Emulation of the Community Atmosphere Model. arXiv preprint 2504.06007.](https://arxiv.org/abs/2504.06007)
+
+### See also:
+- [Chapman, W. E., & Berner, J. (2024). A State-Dependent Model-Error Representation for Online Climate Model Bias Correction. Authorea Preprints.](https://essopenarchive.org/doi/full/10.22541/essoar.172526800.05354621)
+- [Gettelman, A., Gagne, D. J., Chen, C. C., Christensen, M. W., Lebo, Z. J., Morrison, H., & Gantos, G. (2021). Machine learning the warm rain process. Journal of Advances in Modeling Earth Systems, 13(2), e2020MS002268.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002268)
+- [Limon, G. C., & Jablonowski, C. (2023). Probing the skill of random forest emulators for physical parameterizations via a hierarchy of simple CAM6 configurations. Journal of Advances in Modeling Earth Systems, 15(6), e2022MS003395.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003395)
 
 ***
 
@@ -132,16 +142,6 @@ Hybrid ARP-GEM1 combines the dynamical core of the new global atmospheric model 
 
 ***
 
-## Hybrid CAM
-
-### Latest coupled simulations in [Chapman, W. E., & Berner, J. (2024). A State-Dependent Model-Error Representation for Online Climate Model Bias Correction. Authorea Preprints.](https://essopenarchive.org/doi/full/10.22541/essoar.172526800.05354621)
-
-### See also: 
-- [Gettelman, A., Gagne, D. J., Chen, C. C., Christensen, M. W., Lebo, Z. J., Morrison, H., & Gantos, G. (2021). Machine learning the warm rain process. Journal of Advances in Modeling Earth Systems, 13(2), e2020MS002268.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002268)
-- [Limon, G. C., & Jablonowski, C. (2023). Probing the skill of random forest emulators for physical parameterizations via a hierarchy of simple CAM6 configurations. Journal of Advances in Modeling Earth Systems, 15(6), e2022MS003395.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003395)
-
-***
-
 ## Hybrid Land Surface Modeling
 
 More coming soon.
@@ -205,7 +205,7 @@ Using the [hypohydrostatic configuration](https://journals.ametsoc.org/view/jour
 
 ## NCAM
 
-The Neural Community Atmosphere Model (NCAM) uses a real geography setup and combines residual and convolutional strategies, with memory (two time steps are sufficient). It replaces only the moist physics components of CAM, including deep and shallow convection and latent heating from microphysics, but does not replace radiation. 
+The Neural [Community Atmosphere Model](https://www.cesm.ucar.edu/models/cam) (NCAM) uses a real geography setup and combines residual and convolutional strategies, with memory (two time steps are sufficient). It replaces only the moist physics components of CAM, including deep and shallow convection and latent heating from microphysics, but does not replace radiation. 
 
 ### Latest coupled simulations in [Han, Y., Zhang, G. J., & Wang, Y. (2023). An ensemble of neural networks for moist physics processes, its generalizability and stable integration. Journal of Advances in Modeling Earth Systems, 15(10), e2022MS003508.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003508)
 
