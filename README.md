@@ -166,11 +166,14 @@ Using the [hypohydrostatic configuration](https://journals.ametsoc.org/view/jour
 
 ## Hybrid SPEEDY
 
+
+
 ### Latest simulations in [Patel, D., Arcomano, T., Hunt, B., Szunyogh, I., & Ott, E. (2025). Prediction beyond the medium range with an atmosphere-ocean model that combines physics-based modeling and machine learning. Journal of Advances in Modeling Earth Systems, 17, e2024MS004480.](https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2024MS004480)
 
 ### See also:
 - [Arcomano, T., Szunyogh, I., Wikner, A., Hunt, B. R., & Ott, E. (2023). A hybrid atmospheric model incorporating machine learning can capture dynamical processes not captured by its physics‐based component. Geophysical Research Letters, 50(8), e2022GL102649.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022GL102649)
 - [Arcomano, T., Szunyogh, I., Wikner, A., Pathak, J., Hunt, B. R., & Ott, E. (2022). A hybrid approach to atmospheric modeling that combines machine learning with a physics-based numerical model. Journal of Advances in Modeling Earth Systems, 14, e2021MS002712.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021MS002712)
+- [Wikner, A., Pathak, J., Hunt, B., Girvan, M., Arcomano, T., Szunyogh, I., ... & Ott, E. (2020). Combining machine learning with knowledge-based modeling for scalable forecasting and subgrid-scale closure of large, complex, spatiotemporal systems. Chaos: An Interdisciplinary Journal of Nonlinear Science, 30(5).](https://pubs.aip.org/aip/cha/article/30/5/053111/1030728/Combining-machine-learning-with-knowledge-based)
 
 ***
 
