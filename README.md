@@ -29,8 +29,8 @@ If you notice any errors, omissions, or outdated information, please feel free t
 - [LUCIE](#lucie)
 - [MOM6](#mom6)
 - [NCAM](#ncam)
-- [Ola](#ola)
 - [NeuralGCM](#neuralgcm)
+- [Ola](#ola)
 - [Samudra](#samudra)
 
 ***
@@ -168,7 +168,7 @@ Using the [hypohydrostatic configuration](https://journals.ametsoc.org/view/jour
 
 ## Hybrid SPEEDY
 
-
+Hybrid SPEEDY builds on the combined hybrid-parallel prediction [(CHyPP)](https://pubs.aip.org/aip/cha/article/30/5/053111/1030728/Combining-machine-learning-with-knowledge-based) framework, coupling reservoir computing with the Simplified Parameterization, primitive‐Equation Dynamics [(SPEEDY)](https://link.springer.com/article/10.1007/s00382-002-0268-2) atmospheric model. Beyond the standard SPEEDY atmospheric state (3.75°×3.75°, 8 levels), it prognoses 6-h accumulated precipitation, sea-surface temperature (SST), and 0-300 m upper-ocean heat content via a [hybridized recurrent neural network](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021MS002712). Hybrid SPPEDY captures variability from intraseasonal (MJO, convectively coupled waves) to interannual (ENSO) scales. 
 
 ### Latest simulations in [Patel, D., Arcomano, T., Hunt, B., Szunyogh, I., & Ott, E. (2025). Prediction beyond the medium range with an atmosphere-ocean model that combines physics-based modeling and machine learning. Journal of Advances in Modeling Earth Systems, 17, e2024MS004480.](https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2024MS004480)
 
@@ -181,10 +181,24 @@ Using the [hypohydrostatic configuration](https://journals.ametsoc.org/view/jour
 
 ## Hybrid WRF
 
+Hybrid versions of the [Weather Research & Forecasting Model (WRF)](https://www.mmm.ucar.edu/models/wrf) preserve WRF's dynamical core while replacing uncertain WRF parameterizations with ML surrogates. This includes the emulation of radiation, convection, cloud microphysics, and select chemical formation processes.
+
 ### See:
-- [Georgakaki, P., & Nenes, A. (2024). RaFSIP: Parameterizing ice multiplication in models using a machine learning approach. Journal of Advances in Modeling Earth Systems, 16(6), e2023MS003923.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS003923)
-- [Zhong, X., Yu, X., & Li, H. (2024). Machine learning parameterization of the multi-scale Kain–Fritsch (MSKF) convection scheme and stable simulation coupled in the Weather Research and Forecasting (WRF) model using WRF–ML v1. 0. Geoscientific Model Development, 17(9), 3667-3685.](https://gmd.copernicus.org/articles/17/3667/2024/)
+#### Radiation
 - [Zhong, X., Ma, Z., Yao, Y., Xu, L., Wu, Y., & Wang, Z. (2023). WRF–ML v1. 0: a bridge between WRF v4. 3 and machine learning parameterizations and its application to atmospheric radiative transfer. Geoscientific Model Development, 16(1), 199-209.](https://gmd.copernicus.org/articles/16/199/2023/)
+- [Mu, B., Chen, L., Yuan, S., & Qin, B. (2023). A radiative transfer deep learning model coupled into WRF with a generic fortran torch adaptor. Frontiers in Earth Science, 11, 1149566.](https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2023.1149566/full)
+- [Ko, J. S., Kim, S. H., Jo, J., Jang, S., Song, H. J., & Lim, K. S. S. Neural Network Emulator for the Bulk-Type Cloud Microphysics Scheme: Application of the Melting Processes. Available at SSRN 4857342.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4857342)
+
+#### Convection
+- [Zhong, X., Yu, X., & Li, H. (2024). Machine learning parameterization of the multi-scale Kain–Fritsch (MSKF) convection scheme and stable simulation coupled in the Weather Research and Forecasting (WRF) model using WRF–ML v1. 0. Geoscientific Model Development, 17(9), 3667-3685.](https://gmd.copernicus.org/articles/17/3667/2024/)
+
+#### Cloud microphysics
+- [Georgakaki, P., & Nenes, A. (2024). RaFSIP: Parameterizing ice multiplication in models using a machine learning approach. Journal of Advances in Modeling Earth Systems, 16(6), e2023MS003923.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS003923)
+- [Takeishi, A., & Wang, C. (2024). Parameterizing Raindrop Formation Using Machine Learning. Monthly Weather Review, 152(3), 649-665.](https://journals.ametsoc.org/view/journals/mwre/152/3/MWR-D-22-0175.1.xml)
+
+#### Chemistry
+
+- [Sharma, H., Shrivastava, M., & Singh, B. (2023). Physics informed deep neural network embedded in a chemical transport model for the Amazon rainforest. npj Climate and Atmospheric Science, 6(1), 28.](https://www.nature.com/articles/s41612-023-00353-y)
 
 ***
 
@@ -253,4 +267,4 @@ The Ocean-linked-atmosphere (Ola) model is a 0.25°-resolution model coupling tw
 
 ## Samudra
 
-### Latest simulations in [Dheeshjith, S., Subel, A., Adcroft, A., Busecke, J., Fernandez-Granda, C., Gupta, S., & Zanna, L. (2024). Samudra: An AI Global Ocean Emulator for Climate. arXiv preprint 2412.03795.](https://arxiv.org/abs/2412.03795)
+### Latest simulations in [Dheeshjith, S., Subel, A., Adcroft, A., Busecke, J., Fernandez‐Granda, C., Gupta, S., & Zanna, L. (2025). Samudra: An AI global ocean emulator for climate. Geophysical Research Letters, 52(10), e2024GL114318.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL114318?af=R)
