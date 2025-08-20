@@ -147,9 +147,12 @@ Hybrid ARP-GEM1 combines the dynamical core of the new global atmospheric model 
 
 ## Hybrid Land Surface Modeling
 
-More coming soon.
+Attempts to augment global land surface models with ML components that learn hard-to-parameterize processes are emerging, from [data-driven fire schemes coupled to carbon fluxes and vegetation](https://gmd.copernicus.org/articles/18/4103/2025/gmd-18-4103-2025.html) to [emulators of surface fluxes (e.g., evaporation)](https://www.nature.com/articles/s41467-022-29543-7). ML models are trained on observations and high-resolution products, often with physical constraints to preserve the host model's water/energy/carbon budgets.
 
-### See: [Son, R., Stacke, T., Gayler, V., Nabel, J. E., Schnur, R., Alonso, L., ... & Carvalhais, N. (2024). Integration of a Deep‐Learning‐Based Fire Model Into a Global Land Surface Model. Journal of Advances in Modeling Earth Systems, 16(1), e2023MS003710.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003710)
+### See:
+- [Liu, Y., Huang, H., Wang, S. C., Zhang, T., Xu, D., & Chen, Y. (2025). ELM2. 1-XGBfire1. 0: improving wildfire prediction by integrating a machine learning fire model in a land surface model. Geoscientific Model Development, 18(13), 4103-4117.](https://gmd.copernicus.org/articles/18/4103/2025/gmd-18-4103-2025.html)
+- [Son, R., Stacke, T., Gayler, V., Nabel, J. E., Schnur, R., Alonso, L., ... & Carvalhais, N. (2024). Integration of a Deep‐Learning‐Based Fire Model Into a Global Land Surface Model. Journal of Advances in Modeling Earth Systems, 16(1), e2023MS003710.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003710)
+- [Koppa, A., Rains, D., Hulsman, P., Poyatos, R., & Miralles, D. G. (2022). A deep learning-based hybrid model of global terrestrial evaporation. Nature communications, 13(1), 1912.](https://www.nature.com/articles/s41467-022-29543-7)
 
 ***
 
