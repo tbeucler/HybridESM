@@ -57,7 +57,7 @@ CAMulator v1 is a machine-learned emulator of the [Community Atmosphere Model v6
 ### Latest simulations in [Chapman, W. E., Schreck, J. S., Sha, Y., Gagne II, D. J., Kimpara, D., Zanna, L., ... & Berner, J. (2025). CAMulator: Fast Emulation of the Community Atmosphere Model. arXiv preprint 2504.06007.](https://arxiv.org/abs/2504.06007)
 
 ### See also:
-- [Chapman, W. E., & Berner, J. (2024). A State-Dependent Model-Error Representation for Online Climate Model Bias Correction. Authorea Preprints.](https://essopenarchive.org/doi/full/10.22541/essoar.172526800.05354621)
+- [Chapman, W. E., & Berner, J. (2025). Improving climate bias and variability via CNN-based state-dependent model-error corrections. Geophysical Research Letters, 52, e2024GL114106.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL114106)
 - [Gettelman, A., Gagne, D. J., Chen, C. C., Christensen, M. W., Lebo, Z. J., Morrison, H., & Gantos, G. (2021). Machine learning the warm rain process. Journal of Advances in Modeling Earth Systems, 13(2), e2020MS002268.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002268)
 - [Limon, G. C., & Jablonowski, C. (2023). Probing the skill of random forest emulators for physical parameterizations via a hierarchy of simple CAM6 configurations. Journal of Advances in Modeling Earth Systems, 15(6), e2022MS003395.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003395)
 
