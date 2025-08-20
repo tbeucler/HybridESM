@@ -21,7 +21,7 @@ If you notice any errors, omissions, or outdated information, please feel free t
 - [Corrective ML](#corrective-ml)
 - [DLESyM](#dlesym)
 - [Hybrid ARP-GEM](#hybrid-arp-gem)
-- [Hybrid LSM](#hybrid-land-surface-modeling)
+- [Hybrid land surface modeling](#hybrid-land-surface-modeling)
 - [Hybrid SAM](#hybrid-sam)
 - [Hybrid SPEEDY](#hybrid-speedy)
 - [Hybrid WRF](#hybrid-wrf)  
