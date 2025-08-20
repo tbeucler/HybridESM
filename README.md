@@ -226,11 +226,16 @@ The Lightweight Uncoupled ClImate Emulator [(LUCIE)](https://arxiv.org/abs/2405.
 
 ## MOM6
 
-### Latest simulations in [Gregory, W., Bushuk, M., Zhang, Y., Adcroft, A., & Zanna, L. (2024). Machine learning for online sea ice bias correction within global ice‐ocean simulations. Geophysical Research Letters, 51(3), e2023GL106776.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023GL106776)
+The Modular Ocean Model version 6 (MOM6) is a major testbed for hybrid ocean modeling, where ML augments or replaces oceanic parameterizations to correct systematic biases. This includes [bias-correcting sea ice concentration](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023GL106776), parameterizing [mesoscale eddy fluxes](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS004104) and [vertical mixing](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS003890), all of which improve the emergent statistics of the coupled ML-dynamical ocean simulation.
+
+### Latest simulations in [Gregory, W., Bushuk, M., Zhang, Y. F., Adcroft, A., Zanna, L., McHugh, C., & Jia, L. (2025). Advancing global sea ice prediction capabilities using a fully-coupled climate model with integrated machine learning. arXiv preprint:2505.18328.](https://arxiv.org/abs/2505.18328)
 
 ### See also:
-- [Zhang, C., Perezhogin, P., Gultekin, C., Adcroft, A., Fernandez‐Granda, C., & Zanna, L. (2023). Implementation and evaluation of a machine learned mesoscale eddy parameterization into a numerical ocean circulation model. Journal of Advances in Modeling Earth Systems, 15(10), e2023MS003697.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS003697)
-- [Perezhogin, P., Zhang, C., Adcroft, A., Fernandez-Granda, C., & Zanna, L. (2023). Implementation of a data-driven equation-discovery mesoscale parameterization into an ocean model. arXiv preprint 2311.02517.](https://arxiv.org/abs/2311.02517)  
+- [Perezhogin, P., Adcroft, A., & Zanna, L. (2025). Generalizable neural-network parameterization of mesoscale eddies in idealized and global ocean models. arXiv preprint:2505.08900.](https://arxiv.org/abs/2505.08900)
+- [Gregory, W., Bushuk, M., Zhang, Y., Adcroft, A., & Zanna, L. (2024). Machine learning for online sea ice bias correction within global ice‐ocean simulations. Geophysical Research Letters, 51(3), e2023GL106776.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023GL106776)
+- [Zhang, C., Perezhogin, P., Adcroft, A., & Zanna, L. (2025). Addressing out‐of‐sample issues in multi‐layer convolutional neural‐network parameterization of mesoscale eddies applied near coastlines. Journal of Advances in Modeling Earth Systems, 17(5), e2024MS004819.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024MS004819)
+- [Perezhogin, P., Zhang, C., Adcroft, A., Fernandez‐Granda, C., & Zanna, L. (2024). A stable implementation of a data‐driven scale‐aware mesoscale parameterization. Journal of Advances in Modeling Earth Systems, 16(10), e2023MS004104.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS004104)
+- [Zhang, C., Perezhogin, P., Gultekin, C., Adcroft, A., Fernandez‐Granda, C., & Zanna, L. (2023). Implementation and evaluation of a machine learned mesoscale eddy parameterization into a numerical ocean circulation model. Journal of Advances in Modeling Earth Systems, 15(10), e2023MS003697.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS003697)  
 - [Sane, A., Reichl, B. G., Adcroft, A., & Zanna, L. (2023). Parameterizing vertical mixing coefficients in the ocean surface boundary layer using neural networks. Journal of Advances in Modeling Earth Systems, 15(10), e2023MS003890.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS003890)
 - [Partee, S., Ellis, M., Rigazzi, A., Shao, A. E., Bachman, S., Marques, G., & Robbins, B. (2022). Using machine learning at scale in numerical simulations with SmartSim: An application to ocean climate modeling. Journal of Computational Science, 62, 101707.](https://www.sciencedirect.com/science/article/pii/S1877750322001065#b35)
 
@@ -268,5 +273,7 @@ The Ocean-linked-atmosphere (Ola) model is a 0.25°-resolution model coupling tw
 ***
 
 ## Samudra
+
+Trained on coupled simulations using the [OM4 model](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019MS001726), Samudra is a fully data-driven, global 3D ocean emulator that autoregressively predicts sea-surface height, horizontal velocity, potential temperature, and salinity. Samudra's architecture is based on the [ConvNeXt U-Net architecture](https://arxiv.org/abs/2405.18585) and reproduces interannual variability signatures such as ENSO while accelerating the parent model by a factor ~150.
 
 ### Latest simulations in [Dheeshjith, S., Subel, A., Adcroft, A., Busecke, J., Fernandez‐Granda, C., Gupta, S., & Zanna, L. (2025). Samudra: An AI global ocean emulator for climate. Geophysical Research Letters, 52(10), e2024GL114318.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL114318?af=R)
