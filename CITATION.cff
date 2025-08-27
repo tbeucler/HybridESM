@@ -19,9 +19,7 @@ license: "MIT"
 # After Zenodo mints DOIs, fill these:
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.YOUR_VERSION_DOI"   # version-specific
-  - type: doi
-    value: "10.5281/zenodo.YOUR_CONCEPT_DOI"   # concept DOI (all versions)
+    value: "10.5281/zenodo.16967529"   # version-specific
 preferred-citation:
   type: article
   authors:
@@ -30,4 +28,4 @@ preferred-citation:
   title: "Towards Hybrid Earth System Modeling: A Living Review"
   year: 2025
   version: "1.0.0"
-  doi: "10.5281/zenodo.YOUR_VERSION_DOI"
+  doi: "10.5281/zenodo.16967529"
