@@ -16,10 +16,9 @@ keywords:
   - machine learning
 repository-code: "https://github.com/tbeucler/HybridESM"
 license: "MIT"
-# After Zenodo mints DOIs, fill these:
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.16967529"   # version-specific
+    value: "10.5281/zenodo.16967529"  
 preferred-citation:
   type: article
   authors:

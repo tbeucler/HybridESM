@@ -12,7 +12,7 @@ If you notice any errors, omissions, or outdated information, please feel free t
 
 <ins>Author</ins>: Tom Beucler (UNIL); written in the context of [AI4PEX](https://ai4pex.org/) and the [WCRP Lighthouse Activities](https://www.wcrp-climate.org/lha-overview).
 
-### How to cite
+#### How to cite
 Beucler, T. (2025).
 *Towards Hybrid Earth System Modeling: A Living Review* (v1.0).
 Zenodo. https://doi.org/10.5281/zenodo.16967529
