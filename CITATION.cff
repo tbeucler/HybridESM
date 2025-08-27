@@ -1,0 +1,33 @@
+cff-version: 1.0.0
+message: "If you use this living review, please cite it as below."
+title: "Towards Hybrid Earth System Modeling: A Living Review"
+version: "1.0.0"
+date-released: "2025-08-27"
+authors:
+  - family-names: Beucler
+    given-names: Tom
+    affiliation: University of Lausanne
+    orcid: "0000-0002-5731-1040"
+keywords:
+  - Earth system modeling
+  - hybrid models
+  - climate
+  - artificial intelligence
+  - machine learning
+repository-code: "https://github.com/tbeucler/HybridESM"
+license: "MIT"
+# After Zenodo mints DOIs, fill these:
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.YOUR_VERSION_DOI"   # version-specific
+  - type: doi
+    value: "10.5281/zenodo.YOUR_CONCEPT_DOI"   # concept DOI (all versions)
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Beucler
+      given-names: Tom
+  title: "Towards Hybrid Earth System Modeling: A Living Review"
+  year: 2025
+  version: "1.0.0"
+  doi: "10.5281/zenodo.YOUR_VERSION_DOI"

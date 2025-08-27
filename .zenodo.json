@@ -1,0 +1,15 @@
+{"title": "Towards Hybrid Earth System Modeling: A Living Review",
+  "creators": [
+    {"name": "Beucler, Tom", "affiliation": "University of Lausanne", "orcid": "0000-0002-5731-1040"}
+  ],
+  "description": "Alphabetical review of emerging hybrid Earth System Models (ML + physics). v1.0.0 is a snapshot representing the early era of AI-powered ESM as of August 2025.",
+  "license": "MIT",
+  "keywords": ["Earth system modeling", "hybrid models", "artificial intelligence", "machine learning", "climate"],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "identifier": "https://github.com/tbeucler/HybridESM"
+    }
+  ]
+}
