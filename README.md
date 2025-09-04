@@ -225,10 +225,12 @@ The Machine Learning–enhanced (MLe) ICOsahedral Non-hydrostatic (ICON) climate
 
 ## LUCIE
 
-The Lightweight Uncoupled ClImate Emulator [(LUCIE)](https://arxiv.org/abs/2405.16297) is a fully data-driven, Spherical Fourier Neural Operator (SFNO)-based emulator of the [ERA5 meteorological reanalysis](https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/qj.3803). By prognosing only 5 single-level variables, LUCIE allows large ensembles via weight perturbation, which approximate reproduce the main global climate's modes of variability. 
+The Lightweight Uncoupled ClImate Emulator [(LUCIE)](https://arxiv.org/abs/2405.16297) is a fully data-driven, Spherical Fourier Neural Operator (SFNO)-based emulator of the [ERA5 meteorological reanalysis](https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/qj.3803). By prognosing only 5 variables on 8 σ-levels, LUCIE allows large ensembles via weight perturbation, which approximately reproduce the main global climate's modes of variability, including long-term responses to CO2 forcing. 
 
-### Latest simulations in [Guan, H., Arcomano, T., Chattopadhyay, A., & Maulik, R. (2024). LUCIE: A Lightweight Uncoupled ClImate Emulator with long-term stability and physical consistency for O (1000)-member ensembles. arXiv preprint 2405.16297.](https://arxiv.org/abs/2405.16297)
+### Latest simulations in [Guan, H., Arcomano, T., Chattopadhyay, A., & Maulik, R. (2025). LUCIE-3D: A three-dimensional climate emulator for forced responses. arXiv preprint 2509.02061.](https://arxiv.org/abs/2509.02061)
 
+### See also:
+- [Guan, H., Arcomano, T., Chattopadhyay, A., & Maulik, R. (2024). LUCIE: A Lightweight Uncoupled ClImate Emulator with long-term stability and physical consistency for O (1000)-member ensembles. arXiv preprint 2405.16297.](https://arxiv.org/abs/2405.16297)
 
 ***
 
