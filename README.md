@@ -138,7 +138,7 @@ Building on early efforts to enhance subgrid-scale physics through machine learn
 
 The Deep Learning Earth SYstem Model (DLESyM) couples a [deep learning weather prediction model](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS004021) with a deep learning prognostic sea surface temperature (SST) model. The resulting model is parsimonious, using an order of magnitude fewer prognostic variables per grid point (9 for the atmosphere and only SST for the ocean), partly due to its use of the [Hierarchical Equal Area isoLatitude Pixelization (HEALPix)](https://arxiv.org/abs/astro-ph/0409513) spatial grid.
 
-### Latest simulations in [Cresswell-Clay, N., Liu, B., Durran, D., Liu, A., Espinosa, Z. I., Moreno, R., & Karlbauer, M. (2024). A deep learning earth system model for stable and efficient simulation of the current climate. arXiv preprint 2409.16247.](https://arxiv.org/abs/2409.16247)
+### Latest simulations in [Cresswell-Clay, N., Liu, B., Durran, D., Liu, B., Durran, D. R., Liu, Z., Espinosa, Z. I., Moreno, R. A., & Karlbauer, M. (2025). A deep learning Earth system model for efficient simulation of the observed climate. AGU Advances, 6, e2025AV001706.](https://doi.org/10.1029/2025AV001706)
 
 ***
 
