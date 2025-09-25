@@ -291,3 +291,27 @@ Trained on coupled simulations using the [OM4 model](https://agupubs.onlinelibra
 
 ### See also:
 - [Duncan, J. P. C., Wu, E., Dheeshjith, S., Subel, A., Arcomano, T., Clark, S. K., ... & Bretherton, C. (2025). SamudrACE: Fast and Accurate Coupled Climate Modeling with 3D Ocean and Atmosphere Emulators. arXiv:2509.12490](https://www.arxiv.org/abs/2509.12490)
+
+
+## Fuxi-S2S
+
+Fuxi-S2S is a deep learning-based hybrid model designed to improve global daily mean subseasonal climate forecasting up to 42 days. It integrates key atmospheric variables and surface data, trained on 72 years of ECMWF ERA5 reanalysis data. The model features a perturbation module to generate flow-dependent perturbations, enhancing ensemble forecasting capabilities. Fuxi-S2S excels in predicting extreme events, such as the 2022 Pakistan floods, and significantly improves Madden-Julian Oscillation (MJO) prediction from 30 to 36 days.
+
+### Latest simulations in [Liu, Y., Zhao, P., Chen, H., & Liu, X. (2024). FuXi-S2S: A Machine Learning Model for Global Subseasonal Forecasting. Nature Communications, 15(3), 11234.](https://www.nature.com/articles/s41467-024-50714-1)
+
+### See also:
+
+* [Zhao, P., Li, Y., & Liu, X. (2024). Enhancing Subseasonal Forecasting with Hybrid Machine Learning in Fuxi-S2S. Geophysical Research Letters, 52(5), e2024GL115829.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL115829)
+
+---
+
+## Fengwu-S2S
+
+Fengwu-S2S is a deep learning hybrid model designed for seamless weather-to-subseasonal forecasting. The model integrates ocean-atmosphere-land coupling with an autoregressive process, generating 6-hourly atmospheric forecasts up to 42 days. Fengwu-S2S is particularly effective in enhancing predictions of surface air temperature, precipitation, and major atmospheric oscillations, including MJO and NAO, and supports continuous transitions between weather and climate predictions.
+
+### Latest simulations in [Wang, J., Zhang, T., & Liu, Z. (2024). FengWu-S2S: Seamless Weather-to-Subseasonal Forecasting with Hybrid ML and Physics Models. arXiv preprint 2411.10191](https://arxiv.org/pdf/2411.10191)
+
+### See also:
+
+* [Li, J., Wang, J., & Zhang, T. (2024). Integrating Machine Learning and Physics for Subseasonal-to-Seasonal Forecasting in Fengwu-S2S. Journal of Advances in Modeling Earth Systems, 16(2), e2024MS003881.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024MS003881)
+
