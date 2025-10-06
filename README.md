@@ -1,12 +1,12 @@
 # Towards Hybrid Earth System Modeling: A Living Review
 
-This page presents an alphabetical review of emerging hybrid Earth System Models (ESMs), which combine Machine Learning (ML) and physics-based components to simulate the full time evolution of climate variables in response to diverse forcings. These models hold promise for improving long-term projections of Earth's physical climate and biogeochemical cycles. Although new creative approaches continue to emerge, most designs fall into two broad categories:
+This page presents an alphabetical review of emerging approaches that bring machine learning (ML) into Earth system modeling to simulate the full time evolution of climate variables in response to diverse forcings. These models hold promise for improving long-term projections of Earth's physical climate and biogeochemical cycles. Although new creative approaches continue to emerge, most designs fall into two broad categories:
 
-1. **Hybridizing existing ESMs**  
-These approaches build on established ESM codebases, retaining key physics components (e.g., the dynamical core) while replacing or improving parameterizations of hard-to-model processes (e.g., storm formation) with ML. This often involves interfacing Fortran-based codebases with Python-based ML tools. For related technical resources, see [this living review](https://github.com/TRACCS-COMPACT/hybrid_physics_AI_awesome_list/) maintained by Julien Le Sommer and Alexis Barge.
+1. **Hybridizing existing Earth system models (ESMs)**  
+*Hybrid ESMs* build on established ESM codebases, retaining key physics components (e.g., the dynamical core) while replacing or improving parameterizations of hard-to-model processes (e.g., storm formation) with ML. This often involves interfacing Fortran-based codebases with Python-based ML tools. For related technical resources, see [this living review](https://github.com/TRACCS-COMPACT/hybrid_physics_AI_awesome_list/) maintained by Julien Le Sommer and Alexis Barge.
 
 2. **Developing data-driven climate models from scratch**  
-Usually referred to as "climate emulators," these efforts write prognostic equations directly in differentiable programming frameworks, incorporating explicit physical laws (e.g., conservation equations) only when needed. This is a longer-term endeavor, involving the progressive development and coupling of the atmosphere–ocean–land–cryosphere components.
+*Climate emulators* write prognostic equations directly in differentiable programming frameworks, incorporating explicit physical laws (e.g., conservation equations) only when needed. This is a longer-term endeavor, involving the progressive development and coupling of the atmosphere–ocean–land–cryosphere components.
 
 If you notice any errors, omissions, or outdated information, please feel free to submit a pull request.
 
@@ -26,6 +26,7 @@ Zenodo. https://doi.org/10.5281/zenodo.16967529
 - [Corrective ML](#corrective-ml)
 - [DLESyM](#dlesym)
 - [Hybrid ARP-GEM](#hybrid-arp-gem)
+- [Hybrid CAM](#hybrid-cam)
 - [Hybrid Land Surface Modeling](#hybrid-land-surface-modeling)
 - [Hybrid SAM](#hybrid-sam)
 - [Hybrid SPEEDY](#hybrid-speedy)
@@ -64,8 +65,6 @@ CAMulator v1 is a machine-learned emulator of the [Community Atmosphere Model v6
 
 ### See also:
 - [Chapman, W. E., & Berner, J. (2025). Improving climate bias and variability via CNN-based state-dependent model-error corrections. Geophysical Research Letters, 52, e2024GL114106.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL114106)
-- [Gettelman, A., Gagne, D. J., Chen, C. C., Christensen, M. W., Lebo, Z. J., Morrison, H., & Gantos, G. (2021). Machine learning the warm rain process. Journal of Advances in Modeling Earth Systems, 13(2), e2020MS002268.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002268)
-- [Limon, G. C., & Jablonowski, C. (2023). Probing the skill of random forest emulators for physical parameterizations via a hierarchy of simple CAM6 configurations. Journal of Advances in Modeling Earth Systems, 15(6), e2022MS003395.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003395)
 
 ***
 
@@ -148,6 +147,18 @@ The Deep Learning Earth SYstem Model (DLESyM) couples a [deep learning weather p
 Hybrid ARP-GEM1 combines the dynamical core of the new global atmospheric model [ARP-GEM1](https://arxiv.org/abs/2409.19083) (Global, Efficient, and Multiscale version of [ARPEGE]( https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002075) version 1) with neural network-based parameterizations. It employs the Python interface of the Message Passing Interface-based “field-exchange” method [OASIS3]( https://gitlab.com/cerfacs/oasis3-mct/-/tree/OASIS3-MCT_5.0), enabling neural network integration on heterogenous High-Performance Computing (HPC) architectures. Initial prototypes emulate deep learning parameterization, and Hybrid ARP-GEM1's modular design enables the coupling of diverse data-driven parameterizations in the near term.
 
 ### Latest simulations in [Balogh, B., Saint-Martin, D., & Geoffroy, O. (2024). Online test of a neural network deep convection parameterization in ARP-GEM1. arXiv preprint 2410.21920](https://arxiv.org/abs/2410.21920)
+
+***
+
+## Hybrid CAM
+
+Hybrid versions of the [Community Atmosphere Model (CAM)](https://www.cesm.ucar.edu/models/cam) preserve CAM's dynamical core while replacing uncertain CAM parameterizations with ML surrogates. This includes the emulation of moist physics and warm microphysics.
+
+### Latest simulations in [Chen, J., Zhang, M., Zhang, T., Lin, W., & Xue, W. (2025). Stable simulation of the community atmosphere model using machine‐learning physical parameterization trained with experience replay. Journal of Advances in Modeling Earth Systems, 17(6), e2024MS004722.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024MS004722)
+
+### See also:
+- [Gettelman, A., Gagne, D. J., Chen, C. C., Christensen, M. W., Lebo, Z. J., Morrison, H., & Gantos, G. (2021). Machine learning the warm rain process. Journal of Advances in Modeling Earth Systems, 13(2), e2020MS002268.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002268)
+- [Limon, G. C., & Jablonowski, C. (2023). Probing the skill of random forest emulators for physical parameterizations via a hierarchy of simple CAM6 configurations. Journal of Advances in Modeling Earth Systems, 15(6), e2022MS003395.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003395)
 
 ***
 
