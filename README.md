@@ -27,6 +27,7 @@ Zenodo. https://doi.org/10.5281/zenodo.16967529
 - [DLESyM](#dlesym)
 - [Hybrid ARP-GEM](#hybrid-arp-gem)
 - [Hybrid CAM](#hybrid-cam)
+- [Hybrid HadGEM](#hybrid-hadgem)
 - [Hybrid Land Surface Modeling](#hybrid-land-surface-modeling)
 - [Hybrid SAM](#hybrid-sam)
 - [Hybrid SPEEDY](#hybrid-speedy)
@@ -159,6 +160,14 @@ Hybrid versions of the [Community Atmosphere Model (CAM)](https://www.cesm.ucar.
 ### See also:
 - [Gettelman, A., Gagne, D. J., Chen, C. C., Christensen, M. W., Lebo, Z. J., Morrison, H., & Gantos, G. (2021). Machine learning the warm rain process. Journal of Advances in Modeling Earth Systems, 13(2), e2020MS002268.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002268)
 - [Limon, G. C., & Jablonowski, C. (2023). Probing the skill of random forest emulators for physical parameterizations via a hierarchy of simple CAM6 configurations. Journal of Advances in Modeling Earth Systems, 15(6), e2022MS003395.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022MS003395)
+
+***
+
+## Hybrid HadGEM
+
+HadGEM3-GC5.0 is the latest global coupled configuration of the [UK Met Office Hadley Centre model](https://www.metoffice.gov.uk/research/approach/modelling-systems/unified-model/climate-models/hadgem3), combining the [Global Atmosphere and Land v9.0](https://egusphere.copernicus.org/preprints/2025/egusphere-2025-1829/) and the [Global Ocean and Sea Ice v9](https://gmd.copernicus.org/articles/18/377/2025/) components. In an ML-enhanced configuration, a machine-learned cloud fraction/condensate scheme is coupled to GC5.0, replacing the model’s [native prognostic cloud fraction/condensate parameterization](https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/qj.333).
+
+### Latest simulation in [Morcrette, C., Cave, T., Reid, H., da Silva Rodrigues, J., Deveney, T., Kreusser, L., ... & Budd, C. (2025). Scale‐aware parameterization of cloud fraction and condensate for a global atmospheric model machine‐learned from coarse‐grained kilometer‐scale simulations. Journal of Advances in Modeling Earth Systems, 17(4), e2024MS004651.](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024MS004651)
 
 ***
 
