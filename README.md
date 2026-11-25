@@ -25,6 +25,7 @@ Zenodo. https://doi.org/10.5281/zenodo.16967529
 - [ClimSim](#climsim)
 - [Corrective ML](#corrective-ml)
 - [DLESyM](#dlesym)
+- [EBM-KF](#ebm-kf)
 - [Hybrid ARP-GEM](#hybrid-arp-gem)
 - [Hybrid CAM](#hybrid-cam)
 - [Hybrid HadGEM](#hybrid-hadgem)
@@ -33,6 +34,7 @@ Zenodo. https://doi.org/10.5281/zenodo.16967529
 - [Hybrid SPEEDY](#hybrid-speedy)
 - [Hybrid WRF](#hybrid-wrf)  
 - [ICON-MLe](#icon-mle)
+- [ISEFlow](#iseflow)
 - [LUCIE](#lucie)
 - [MOM6](#mom6)
 - [NCAM](#ncam)
@@ -143,6 +145,17 @@ The Deep Learning Earth SYstem Model (DLESyM) couples a [deep learning weather p
 
 ***
 
+## EBM-KF
+
+The Energy-Balance Model–Kalman Filter (EBM-KF) is a hybrid estimator of the global climate state and its uncertainty. It pairs an annual two-layer [energy-balance model](https://journals.ametsoc.org/view/journals/clim/26/6/jcli-d-12-00195.1.xml) (difference equations for global mean surface temperature and deep-ocean temperature, with 17 literature-derived parameters, forced by CO<sub>2</sub>, anthropogenic aerosols and clouds, and volcanic aerosol optical depth) with an extended Kalman filter that assimilates global mean surface temperature (GMST) and ocean heat content anomaly (OHCA), either from observations or from Earth system model output. The physics supplies the forced prior; the filter returns an annual Gaussian posterior climate state that matches the 30-year climate normal about 15 years sooner, or a hindcast ensemble mean when volcanic forcing is not filtered. Because it is fast, EBM-KF yields annual probabilities of crossing policy thresholds such as 1.5 °C, runs ensembles of thousands of members sampling intermittent future volcanism, and, in one variant, approximates the spread of the [CESM2 Large Ensemble](https://esd.copernicus.org/articles/12/1393/2021/) from one or a few members. EBM-KF is one of the methods selected in a community assessment of how to determine when long-term warming exceeds 1.5 °C. Code is available on [Harvard Dataverse](https://doi.org/10.7910/DVN/XLY8C2) and [GitHub](https://github.com/jnickla1/climate_data).
+
+### Latest simulations in [Thorne, P. W., Nicklas, J. M., Kennedy, J. J., Calvert, B., Fox-Kemper, B., Richardson, M. T., ... & Murtagh, E. (2026). How well can we quantify when 1.5°C of global warming has been exceeded? Earth System Science Data Discussions, essd-2025-825.](https://essd.copernicus.org/preprints/essd-2025-825/)
+
+### See also:
+- [Nicklas, J. M., Fox-Kemper, B., & Lawrence, C. (2025). Efficient estimation of climate state and its uncertainty using Kalman filtering with application to policy thresholds and volcanism. Journal of Climate, 38(5), 1235-1270.](https://doi.org/10.1175/JCLI-D-23-0580.1)
+
+***
+
 ## Hybrid ARP-GEM
 
 Hybrid ARP-GEM1 combines the dynamical core of the new global atmospheric model [ARP-GEM1](https://arxiv.org/abs/2409.19083) (Global, Efficient, and Multiscale version of [ARPEGE]( https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020MS002075) version 1) with neural network-based parameterizations. It employs the Python interface of the Message Passing Interface-based “field-exchange” method [OASIS3]( https://gitlab.com/cerfacs/oasis3-mct/-/tree/OASIS3-MCT_5.0), enabling neural network integration on heterogenous High-Performance Computing (HPC) architectures. Initial prototypes emulate deep learning parameterization, and Hybrid ARP-GEM1's modular design enables the coupling of diverse data-driven parameterizations in the near term.
@@ -241,6 +254,18 @@ The Machine Learning–enhanced (MLe) ICOsahedral Non-hydrostatic (ICON) climate
 - [Heuer, H., Schwabe, M., Gentine, P., Giorgetta, M. A., & Eyring, V. (2024). Interpretable multiscale machine learning-based parameterizations of convection for ICON. Journal of Advances in Modeling Earth Systems, 16, e2024MS004398.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024MS004398)
 - [Grundner, A., Beucler, T., Gentine, P., & Eyring, V. (2024). Data‐driven equation discovery of a cloud cover parameterization. Journal of Advances in Modeling Earth Systems, 16(3), e2023MS003763.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023MS003763)
 - [Grundner, A., Beucler, T., Gentine, P., Iglesias‐Suarez, F., Giorgetta, M. A., & Eyring, V. (2022). Deep learning based cloud cover parameterization for ICON. Journal of Advances in Modeling Earth Systems, 14(12), e2021MS002959.](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021MS002959)
+
+***
+
+## ISEFlow
+
+The Flow-based Ice Sheet Emulator (ISEFlow) emulates the [Ice Sheet Model Intercomparison Project for CMIP6 (ISMIP6)](https://theghub.org/groups/ismip6/wiki) ensemble, predicting the sea level contributions of the Antarctic and Greenland ice sheets through 2100 from yearly CMIP6 atmospheric and oceanic forcing anomalies and from characteristics of each ice sheet model (e.g., initialization and process treatments). A deep ensemble of LSTMs is combined with a normalizing flow, separating uncertainty arising from training-data coverage from uncertainty inherent to the emulator. By resolving smaller regions and using all available forcings and model characteristics, ISEFlow reduces the Antarctic mean squared error about 2.5-fold relative to Emulandice, outperforms both Emulandice and LARMIP (the emulators used in IPCC AR6) at approximating the projection distribution and distinguishing emissions scenarios, and runs inference faster; Shapley analysis ranks the forcings and model choices that drive the projections. Pretrained ISEFlow-AIS and ISEFlow-GrIS weights are distributed in the [ISE package](https://github.com/Brown-SciML/ise).
+
+### Latest simulations in [Van Katwyk, P., Fox-Kemper, B., Nowicki, S., Seroussi, H., & Bergen, K. J. (2025). ISEFlow v1.0: A flow-based neural network emulator for improved sea level projections and uncertainty quantification. EGUsphere preprint, egusphere-2025-870.](https://doi.org/10.5194/egusphere-2025-870)
+
+### See also:
+- [Van Katwyk, P., Fox-Kemper, B., Hewitt, H. T., & Bergen, K. J. (2026). Rewiring climate modeling with machine learning emulators. Communications Earth & Environment.](https://doi.org/10.1038/s43247-026-03238-z)
+- [Van Katwyk, P., Fox-Kemper, B., Seroussi, H., Nowicki, S., & Bergen, K. J. (2023). A variational LSTM emulator of sea level contribution from the Antarctic ice sheet. Journal of Advances in Modeling Earth Systems, 15, e2023MS003899.](https://doi.org/10.1029/2023MS003899)
 
 ***
 
